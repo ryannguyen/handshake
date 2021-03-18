@@ -1,0 +1,20 @@
+<html>
+  <body>
+  <%= form_with model: @chirp do |form| %>
+    <div>
+      <%= form.text_area :text %>
+      <% @chirp.errors.full_messages_for(:text).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+  <ul id="chirps">
+  <%= render "chirps", chirps: @chirps %>
+  </ul>
+  </body>
+</html>

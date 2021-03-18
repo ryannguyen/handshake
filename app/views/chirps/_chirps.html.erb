@@ -1,0 +1,5 @@
+<% chirps.each do |c| %>
+  <li>
+    <td><%= c.votes.nil? ? "0" : c.votes  %> - <%= c.id %> -- <%= c.text.upcase %> <%= link_to "Upvote", upvote_chirp_path(c) %> <%= link_to "Downvote", downvote_chirp_path(c) %></td>
+  </li>
+<% end %>

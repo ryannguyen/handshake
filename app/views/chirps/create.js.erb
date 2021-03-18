@@ -1,0 +1,7 @@
+var body = document.getElementById("chirps");
+body.innerHTML = "<%= j render @chirps %>" + body.innerHTML;
+
+// clear and focus on input
+var input = document.getElementById("chirp_text");
+input.value = '';
+input.focus();
